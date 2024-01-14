@@ -21,3 +21,5 @@ schema(code) => documents(DB)
 ### session
 
 ### cookie
+
+### flash messages
