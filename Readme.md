@@ -6,13 +6,9 @@
 
 1. DB setup -> DB formation
 2. Model -> collection
-<br>
-models(code) => collection(DB)
-<br>
+- models(code) => collection(DB)
 3. schema -> documents
-<br>
-schema(code) => documents(DB)
-<br>
+- schema(code) => documents(DB)
 
 ###  Client Vs Server
 - client : browser, mobile device
