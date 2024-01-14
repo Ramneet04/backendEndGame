@@ -8,7 +8,7 @@
 2. Model -> collection
 - models(code) => collection(DB)
 3. schema -> documents
--schema(code) => documents(DB)
+- schema(code) => documents(DB)
 
 ###  Client Vs Server
 - client : browser, mobile device
