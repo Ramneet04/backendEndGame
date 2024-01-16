@@ -10,8 +10,15 @@ global variable is worst thing for backend if they are not nessesary.
 ## intermediate mongodb
 
 1. How Can i perform a case-insensitive search in Mongoose?
-- router.get("/find",async function(req, res){
-  var regex=new RegExp("^ramneet04$","i");
+- router.get("/find",async function(req, res){ 
+  <br>
+  var regex=new RegExp("^ramneet04$","i");  //regular expression <br>
   let user= await userModel.find({username:regex});
+  <br>
   res.send(user);
-})
+  <br>
+  // ^ starting, $ ending
+  <br>
+});
+
+2. Authentication and Authorization

@@ -8,18 +8,26 @@ var flash=require('connect-flash');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const passport = require('passport');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+//here we,re allowing server for session, so server can save or hold the data
+//here we are allowing
 app.use(session({
   resave:false,
   saveUninitialized:false,
   secret:"it is a secret"
 }))
+
+app.use(passport.initialize()); //initializing passport for performing authetication and authorozations.
+app.use(passport.session()); //passport can save session. // here session is getting created.
+passport.serializeUser(usersRouter.serializeUser());
+passport.deserializeUser(usersRouter.deserializeUser());
+
 
 app.use(flash());
 
