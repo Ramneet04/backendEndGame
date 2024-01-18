@@ -26,7 +26,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/profile', isLoggedIn ,function(req, res) {
-  res.send('Welcome to profile');
+  res.render('profile');
 });
 
 router.post('/register', function(req,res){
@@ -57,7 +57,7 @@ router.get("/logout",function(req,res,next){
 });
 
 function isLoggedIn(req,res,next){ //it works as a middleware
-  if(req.isAutheticated()){ //agar autehnticate ho move forward matlab agle function pe jaha use kiya hai as amiddleware
+  if(req.isAuthenticated()){ //agar autehnticate ho move forward matlab agle function pe jaha use kiya hai as amiddleware
     return next();
   }
   res.redirect("/"); //else go to "/" ;
